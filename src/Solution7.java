@@ -21,6 +21,14 @@ class Result1 {
 
         return result;
     }
+
+    public static int size() {
+        return 0;
+    }
+
+    public static char[] get(int i) {
+        return new char[0];
+    }
 }
 
 public class Solution7 {
@@ -40,11 +48,11 @@ public class Solution7 {
             b.add(Integer.parseInt(bTemp[i]));
         }
 
-        List<Integer> result = Result.compareTriplets(a, b);
+     //   List<Integer> result = Result.compareTriplets(a, b);
 
-        for (int i = 0; i < result.size(); i++) {
-            bufferedWriter.write(String.valueOf(result.get(i)));
-            if (i != result.size() - 1) {
+        for (int i = 0; i < Result1.size(); i++) {
+            bufferedWriter.write(String.valueOf(Result1.get(i)));
+            if (i != Result1.size() - 1) {
                 bufferedWriter.write(" ");
             }
         }
@@ -54,3 +62,5 @@ public class Solution7 {
         bufferedWriter.close();
     }
 }
+
+
