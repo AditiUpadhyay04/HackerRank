@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-    class Result {
+    class ResultAt{
 
         public static int simpleArraySum(List<Integer> ar) {
             int sum = 0;
@@ -9,6 +9,28 @@ import java.util.*;
                 sum = sum + num;
             }
             return sum;
+        }
+
+        public static List<Integer> gradingStudents(List<Integer> grades) {
+            List<Integer> result = new ArrayList<>();
+
+            for(int grade : grades){
+                if(grade < 38){
+                    result.add(grade);
+
+                }
+                else{
+                    int nextMultiple  = ((grade / 5) + 1) * 5;
+                    if(nextMultiple - grade < 3){
+                        result.add(nextMultiple);
+
+                    }
+                    else{
+                        result.add(grade);
+                    }
+                }
+            }
+            return result;
         }
     }
 
@@ -28,7 +50,7 @@ import java.util.*;
                 ar.add(arItem);
             }
 
-            int result = Result.simpleArraySum(ar);
+            int result = ResultAt.simpleArraySum(ar);
 
             bufferedWriter.write(String.valueOf(result));
             bufferedWriter.newLine();
@@ -37,5 +59,7 @@ import java.util.*;
             bufferedWriter.close();
         }
     }
+
+
 
 
